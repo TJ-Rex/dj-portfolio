@@ -1,6 +1,7 @@
 from django.db import models
-from django.db import models
+
 from django.db.models.fields import CharField, URLField
+
 from cloudinary.models import CloudinaryField
 
 class Project(models.Model):
