@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<header class="row bg-black">
+   <div class="col-md-4">
+      <img src="{% static 'risita.jpg'%}" alt="" width="400" height="350">
+   </div>
+
+   <div class="col-md-8 my-auto">
+      <h1><strong>Soy Tabata Saltos</strong></h1>
+      <h3>Alo?</h3>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro eius suscipit harum exercitationem laborum! Distinctio dignissimos vitae id totam atque sed explicabo sequi nesciunt ullam ex enim delectus ad officia quisquam eos laudantium, nihil ipsa maiores quis cum voluptatem suscipit. Ab quaerat dicta expedita in est, culpa beatae quidem recusandae, ea, ipsa magni? Suscipit incidunt sunt dolores deleniti recusandae odit! Praesentium voluptate nam mollitia quos iusto commodi.</p>
+      <a href="{% static 'MeowGical Games.pdf' %}" class="btn btn-primary btn-lg rounded-0 my-3 ">Download CV</a>
+   </div>
+</header>
+
+<div class="row my-4">
+
+   <h3>My projecto</h3>
+   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, eaque?</p>
+   {% for project in projects %}
+
+   <div class="col-md-4 p-4">
+
+      <div class="card bg-black card-project">
+
+         <img src="{{project.image.url}}" alt="{{project.title}}" class="card-img-top"/>
+
+         <div class="card-body">
+
+            <h2>{{project.title}}</h2>
+
+            <p>{{project.description}}</p>
+           
+   
+            {% if project.url %}
+             <a href="{{project.url}}" class="btn btn-light rounded-0 btn-sm" target="_blank">{{project.url}}</a>
+
+             {% endif %}
+
+         </div>
+      </div>
+   </div>
+{% endfor %} 
+
+{% endblock %}
+   
+</div>
