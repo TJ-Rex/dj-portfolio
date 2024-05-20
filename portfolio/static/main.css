@@ -11,6 +11,6 @@ body{
 }
 
 .card-project:hover{
-    border: 1px solid #fff;
+    border: 1px solid #5f1066;
     cursor: pointer;
 }
